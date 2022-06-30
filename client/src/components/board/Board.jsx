@@ -2,9 +2,13 @@ import React from 'react';
 import Points from "../Points";
 
 const Board = ({room}) => {
-    let activeIssue = room.issues.find(item => item._id === room.activeIssue)
-    let user = room.users.find(item => item.key === localStorage.getItem('plan_key'))
-    let points = activeIssue.points.find(item => item.user === user._id)
+    let points = null
+    if (room.activeIssue){
+        let activeIssue = room.issues.find(item => item._id === room.activeIssue)
+        let user = room.users.find(item => item.key === localStorage.getItem('plan_key'))
+        points = activeIssue.points.find(item => item.user === user._id)
+    }
+
     return (
         <div id={`board`}>
             <div id={`current-issue`}>

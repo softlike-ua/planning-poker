@@ -9,7 +9,7 @@
     width: 50%;
 }
 
-#user-list{
+#user-list {
     width: 20%;
 }
 
@@ -24,7 +24,7 @@
 }
 
 .user-place {
-    padding:10px 20px;
+    padding: 10px 20px;
     border-radius: 4px;
     margin-bottom: 5px;
     box-shadow: 0 1px 2px 0;
@@ -52,6 +52,8 @@ button:hover {
     border-radius: 4px;
     box-shadow: 0 1px 2px 0;
     background: white;
+    width: 100%;
+
 }
 
 .issue-card div {
@@ -59,11 +61,18 @@ button:hover {
 }
 
 #issue-bar {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
     background: grey;
     height: 95%;
-    overflow-y: scroll;
+    overflow-y: auto;
     width: 20%;
     padding: 20px;
+}
+
+#issue-list {
+    width: 100%;
 }
 
 #points {
